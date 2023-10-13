@@ -18,6 +18,7 @@ public class IOClient {
 
         //发送request
         ops.writeObject(request);
+        ops.flush();
         //获取响应结果
         RPCResponse response = (RPCResponse) ips.readObject();
         return response;
