@@ -36,8 +36,11 @@ public class Server {
                         System.out.println("传输过来的数据为" + request);
 
                         //反射调用对应的方法
-                        Class<? extends studentService> aClass = service.getClass();
+                        Class<? extends studentService> aClass = service.getClass();//获取要调用服务的类对象
+                        //根据request中的接口名称 和 需要调用的服务类对象  获取需要调用的方法对象
                         Method method = aClass.getMethod(request.getMethodName(), request.getParamsType());
+                        //根据request中的参数 和 调用服务的对象类 执行方法
+                        //参数详解：  service为要调用服务的服务对象类    执行方法所需要的参数
                         Object result = method.invoke(service, request.getParams());
                         //将响应结果响应回去
                         opt.writeObject(comResponse.success(result));

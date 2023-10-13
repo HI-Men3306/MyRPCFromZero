@@ -1,4 +1,4 @@
-package version11.common;
+package version2.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,11 +8,11 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-public class user implements Serializable {
-    private int id;
+@AllArgsConstructor
+@NoArgsConstructor
+public class User implements Serializable {
     private String username;
-    private Boolean sex;
+    private Integer id;
+    private char sex;
 }
