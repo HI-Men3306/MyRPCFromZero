@@ -3,8 +3,11 @@ package version2.server;
 import java.util.HashMap;
 import java.util.Map;
 
+
+//干什么的？  在利用反射机制调用方法时 需要被调用方法所属的服务实体对象  但是服务器存在多个不同的服务，这就需要把所有的服务实体对象创建出来
+//用于反射调用不同的方法   但是如何将方法中和服务实体对象一一对应起来？  这个类就是干的这个事情
 public class serviceInterfaceProvider {
-    //存放多个
+    //key：方法所属的接口(类)名称   value：接口（类）实体对象
     private Map<String,Object> interfaceProvider;
 
     public serviceInterfaceProvider(){

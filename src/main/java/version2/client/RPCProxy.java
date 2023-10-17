@@ -1,7 +1,6 @@
 package version2.client;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import version2.common.RPCRequest;
 import version2.common.RPCResponse;

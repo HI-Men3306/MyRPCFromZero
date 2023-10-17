@@ -8,6 +8,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+//线程池版本的服务器
 //使用线程池管理 处理request的线程
 public class ThreadPoolRPCServer implements PRCServerInterface{
     private final ThreadPoolExecutor threadPool;
@@ -21,7 +22,7 @@ public class ThreadPoolRPCServer implements PRCServerInterface{
         this.provider = provide;
     }
 
-    // 自定义构造函数
+    // 自定义构造函数 自定义线程池的配置
     public ThreadPoolRPCServer(serviceInterfaceProvider serviceProvider, int corePoolSize,
                                   int maximumPoolSize,
                                   long keepAliveTime,
@@ -38,6 +39,7 @@ public class ThreadPoolRPCServer implements PRCServerInterface{
             System.out.println("基于线程池的服务器启动了");
             while (true){
                 Socket socket = serverSocket.accept();
+                //这里是线程池版本和普通版本的区别  线程池版本：使用受控的线程
                 threadPool.execute(new workThread(socket,provider));
             }
         } catch (IOException e) {

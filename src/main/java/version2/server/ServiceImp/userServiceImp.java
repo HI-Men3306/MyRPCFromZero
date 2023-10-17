@@ -3,6 +3,7 @@ package version2.server.ServiceImp;
 import version2.common.User;
 import version2.service.userService;
 
+//user服务接口实现类
 public class userServiceImp implements userService {
     @Override
     public User selectUserById(int id) {

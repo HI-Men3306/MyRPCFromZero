@@ -3,6 +3,7 @@ package version2.server.ServiceImp;
 import version2.common.Blog;
 import version2.service.blogService;
 
+//blog服务接口实现类
 public class blogServiceImp implements blogService {
     @Override
     public Blog getBlogById(Integer id) {

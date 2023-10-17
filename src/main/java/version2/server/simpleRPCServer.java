@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+//普通BIO的服务器实现版本
 public class simpleRPCServer implements PRCServerInterface{
     private serviceInterfaceProvider provider;
 
@@ -19,6 +20,7 @@ public class simpleRPCServer implements PRCServerInterface{
             while (true){
                 Socket socket = serverSocket.accept();
                 //开启一个新线程去处理针对于当前的通信
+                //普通版本的服务器 对于每个新的request 都创建一个新的线程去处理
                 new Thread(new workThread(socket,provider)).start();
             }
         } catch (IOException e) {

@@ -5,9 +5,10 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-//对响应数据的统一封装
+
 @Data
 @Builder
+//对响应数据的统一封装
 public class RPCResponse implements Serializable {
     //响应状态码  类似http的状态码 用来标记当前响应的状态
     private int code;
@@ -28,3 +29,5 @@ public class RPCResponse implements Serializable {
 
 
 }
+
+

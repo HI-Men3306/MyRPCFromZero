@@ -1,6 +1,6 @@
 package com.example.rpc;
 
-import org.springframework.boot.SpringApplication;
+/*import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
@@ -10,4 +10,4 @@ public class RpcApplication {
         SpringApplication.run(RpcApplication.class, args);
     }
 
-}
+}*/

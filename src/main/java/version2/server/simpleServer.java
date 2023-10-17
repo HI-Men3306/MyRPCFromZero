@@ -16,9 +16,11 @@ public class simpleServer {
         provider.provideServiceInterface(blogService);
 
         //服务器开始工作
+        //普通版本的服务器
         simpleRPCServer simpleRPCServer = new simpleRPCServer(provider);
         //simpleRPCServer.start(8899);
 
+        //线程池版本的服务器
         ThreadPoolRPCServer threadPoolRPCServer = new ThreadPoolRPCServer(provider);
         threadPoolRPCServer.start(8899);
     }
