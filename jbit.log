@@ -1,0 +1,93 @@
+2023-10-19 16:21:37io.netty.util.internal.logging.InternalLoggerFactory.newDefaultFactory(InternalLoggerFactory.java:53) InternalLoggerFactory.java DEBUG Using Log4J as the default logging framework
+2023-10-19 16:21:37io.netty.channel.MultithreadEventLoopGroup.<clinit>(MultithreadEventLoopGroup.java:44) MultithreadEventLoopGroup.java DEBUG -Dio.netty.eventLoopThreads: 24
+2023-10-19 16:21:37io.netty.util.internal.InternalThreadLocalMap.<clinit>(InternalThreadLocalMap.java:56) InternalThreadLocalMap.java DEBUG -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2023-10-19 16:21:37io.netty.util.internal.InternalThreadLocalMap.<clinit>(InternalThreadLocalMap.java:59) InternalThreadLocalMap.java DEBUG -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2023-10-19 16:21:37io.netty.channel.nio.NioEventLoop.<clinit>(NioEventLoop.java:106) NioEventLoop.java DEBUG -Dio.netty.noKeySetOptimization: false
+2023-10-19 16:21:37io.netty.channel.nio.NioEventLoop.<clinit>(NioEventLoop.java:107) NioEventLoop.java DEBUG -Dio.netty.selectorAutoRebuildThreshold: 512
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent.isWindows0(PlatformDependent.java:1015) PlatformDependent.java DEBUG Platform: Windows
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent0.explicitNoUnsafeCause0(PlatformDependent0.java:408) PlatformDependent0.java DEBUG -Dio.netty.noUnsafe: false
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent0.javaVersion0(PlatformDependent0.java:876) PlatformDependent0.java DEBUG Java version: 17
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:125) PlatformDependent0.java DEBUG sun.misc.Unsafe.theUnsafe: available
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:149) PlatformDependent0.java DEBUG sun.misc.Unsafe.copyMemory: available
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:187) PlatformDependent0.java DEBUG java.nio.Buffer.address: available
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:261) PlatformDependent0.java DEBUG direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:233)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:227)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:44)
+	at version3.nettyTest.Sserver.main(server.java:15)
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:326) PlatformDependent0.java DEBUG java.nio.Bits.unaligned: available, true
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:385) PlatformDependent0.java DEBUG jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1ed4004b
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:560)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:347)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:338)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:289)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue0(NioEventLoop.java:279)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:150)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:138)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:146)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:37)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:96)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:91)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:52)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:44)
+	at version3.nettyTest.Sserver.main(server.java:15)
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:398) PlatformDependent0.java DEBUG java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent.unsafeUnavailabilityCause0(PlatformDependent.java:1058) PlatformDependent.java DEBUG sun.misc.Unsafe: available
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent.maxDirectMemory0(PlatformDependent.java:1158) PlatformDependent.java DEBUG maxDirectMemory: 4223664128 bytes (maybe)
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent.tmpdir0(PlatformDependent.java:1177) PlatformDependent.java DEBUG -Dio.netty.tmpdir: C:\Windows\TEMP (java.io.tmpdir)
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent.bitMode0(PlatformDependent.java:1256) PlatformDependent.java DEBUG -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:177) PlatformDependent.java DEBUG -Dio.netty.maxDirectMemory: -1 bytes
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:184) PlatformDependent.java DEBUG -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2023-10-19 16:21:37io.netty.util.internal.CleanerJava9.<clinit>(CleanerJava9.java:71) CleanerJava9.java DEBUG java.nio.ByteBuffer.cleaner(): available
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:204) PlatformDependent.java DEBUG -Dio.netty.noPreferDirect: false
+2023-10-19 16:21:37io.netty.util.internal.PlatformDependent$Mpsc.<clinit>(PlatformDependent.java:919) PlatformDependent.java DEBUG org.jctools-core.MpscChunkedArrayQueue: available
+2023-10-19 16:21:37io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:79) DefaultChannelId.java DEBUG -Dio.netty.processId: 8720 (auto-detected)
+2023-10-19 16:21:37io.netty.util.NetUtil.<clinit>(NetUtil.java:139) NetUtil.java DEBUG -Djava.net.preferIPv4Stack: false
+2023-10-19 16:21:37io.netty.util.NetUtil.<clinit>(NetUtil.java:140) NetUtil.java DEBUG -Djava.net.preferIPv6Addresses: false
+2023-10-19 16:21:37io.netty.util.NetUtil.<clinit>(NetUtil.java:224) NetUtil.java DEBUG Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2023-10-19 16:21:37io.netty.util.NetUtil$1.run(NetUtil.java:289) NetUtil.java DEBUG Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2023-10-19 16:21:37io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:101) DefaultChannelId.java DEBUG -Dio.netty.machineId: 28:df:eb:ff:fe:fc:e9:c3 (auto-detected)
+2023-10-19 16:21:37io.netty.util.ResourceLeakDetector.<clinit>(ResourceLeakDetector.java:130) ResourceLeakDetector.java DEBUG -Dio.netty.leakDetection.level: simple
+2023-10-19 16:21:37io.netty.util.ResourceLeakDetector.<clinit>(ResourceLeakDetector.java:131) ResourceLeakDetector.java DEBUG -Dio.netty.leakDetection.targetRecords: 4
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:156) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.numHeapArenas: 24
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:157) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.numDirectArenas: 24
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:159) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.pageSize: 8192
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:164) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.maxOrder: 11
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:168) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.chunkSize: 16777216
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:169) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.tinyCacheSize: 512
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:170) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.smallCacheSize: 256
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:171) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.normalCacheSize: 64
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:172) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:173) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.cacheTrimInterval: 8192
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:174) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:175) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.useCacheForAllThreads: true
+2023-10-19 16:21:37io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:176) PooledByteBufAllocator.java DEBUG -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2023-10-19 16:21:37io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:86) ByteBufUtil.java DEBUG -Dio.netty.allocator.type: pooled
+2023-10-19 16:21:37io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:95) ByteBufUtil.java DEBUG -Dio.netty.threadLocalDirectBufferSize: 0
+2023-10-19 16:21:37io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:98) ByteBufUtil.java DEBUG -Dio.netty.maxThreadLocalCharBufferSize: 16384

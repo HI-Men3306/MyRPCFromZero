@@ -19,8 +19,8 @@ public class simpleRPCClient implements RPCClient{
     @Override
     public RPCResponse sendRequest(RPCRequest request) {
         try (Socket socket = new Socket(host, port)) {
-            ObjectInputStream ips = new ObjectInputStream(socket.getInputStream());
             ObjectOutputStream ops = new ObjectOutputStream(socket.getOutputStream());
+            ObjectInputStream ips = new ObjectInputStream(socket.getInputStream());
 
             //发送数据
             ops.writeObject(request);

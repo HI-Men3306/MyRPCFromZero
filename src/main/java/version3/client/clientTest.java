@@ -7,8 +7,12 @@ import version3.service.userService;
 
 public class clientTest {
     public static void main(String[] args) {
+        RPCClient client;
         //创建一个基于BIO通信的request发送方式
-        RPCClient client = new simpleRPCClient("127.0.0.1", 8899);
+        //client = new simpleRPCClient("127.0.0.1", 8899);
+
+        //创建一个基于netty通信的request客户端
+        client = new nettyRPCClient("127.0.0.1",8899);
 
         //创建基于BIO方式的代理对象
         RPCProxy rpcProxy = new RPCProxy(client);

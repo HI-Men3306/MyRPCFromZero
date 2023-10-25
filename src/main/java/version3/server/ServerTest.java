@@ -18,7 +18,9 @@ public class ServerTest {
         provider.provideServiceInstance(blogService);
 
         //创建基于线程池的服务器
-        RPCServerInterface server = new threadPoolServer(provider);
+        //RPCServerInterface server = new threadPoolServer(provider);
+        //创建基于netty的服务器
+        RPCServerInterface server = new nettyRPCServer(provider);
         //启动服务
         server.start(8899);
     }
