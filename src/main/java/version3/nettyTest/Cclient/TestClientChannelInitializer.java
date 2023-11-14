@@ -16,6 +16,7 @@ public class TestClientChannelInitializer extends ChannelInitializer {
         pipeline.addLast(new LengthFieldBasedFrameDecoder(Integer.MAX_VALUE,0,4,0,4));
         pipeline.addLast(new LengthFieldPrepender(4));
         pipeline.addLast(new ObjectEncoder());
+        //解码器  将字节流转换为java对象
         pipeline.addLast(new ObjectDecoder(new ClassResolver() {
             @Override
             public Class<?> resolve(String s) throws ClassNotFoundException {
@@ -23,7 +24,7 @@ public class TestClientChannelInitializer extends ChannelInitializer {
             }
         }));
 
-        //添加一个自定义的handle用来处理response信息
+        //添加一个自定义的handle用来处理服务器响应回的response信息
         pipeline.addLast(new TestClientHandle());
     }
 }

@@ -26,7 +26,8 @@ public class nettyClient implements RPCClient{
     @Override
     public response sendRequest(request Req) {
         try {
-            //在建立连接时 直接阻塞当前线程 直到连接成功
+            //在建立连接时 直接阻塞当前线程 直到连接成功  如果不阻塞当前线程 当前线程会直接继续执行 而在下面需要使用过建立的连接发送请求
+            //如果不阻塞当前线程 可能会造成一种情况：连接还没异步连接 就直接发送请求了  自然是错误的
             ChannelFuture connect = bootstrap.connect(host, port).sync();
             //发送请求
             connect.channel().writeAndFlush(Req);

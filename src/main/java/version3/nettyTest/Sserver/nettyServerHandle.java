@@ -27,6 +27,7 @@ public class nettyServerHandle extends SimpleChannelInboundHandler<request> {
             //反射调用本地方法
             //获取对应服务实例
             Object instance = provider.getInstance(request.getInterfaceName());
+            System.out.println("获取的服务实例对象接口为" + instance);
             //获取要调用的方法
             Method method = instance.getClass().getMethod(request.getMethodName(),request.getParamsType());
             //反射执行方法

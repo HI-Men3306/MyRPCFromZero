@@ -17,6 +17,7 @@ public class ServerInitializer extends ChannelInitializer {
         channel.pipeline()
                 .addLast(new LengthFieldBasedFrameDecoder(Integer.MAX_VALUE,0,4,0,4))
                 .addLast(new LengthFieldPrepender(4))
+                //解码器 将字节流转换为java对象
                 .addLast(new ObjectDecoder(new ClassResolver() {
                     @Override
                     public Class<?> resolve(String s) throws ClassNotFoundException {

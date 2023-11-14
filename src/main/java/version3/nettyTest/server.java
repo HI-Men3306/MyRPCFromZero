@@ -1,16 +1,8 @@
 package version3.nettyTest;
 
-import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.*;
-import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.handler.codec.string.StringDecoder;
-import io.netty.handler.codec.string.StringEncoder;
-
 public class server {
     public static void main(String[] args) throws InterruptedException {
-        //创建EventLoopGroup 作为主从轮询池
+        /*//创建EventLoopGroup 作为主从轮询池
         EventLoopGroup boss = new NioEventLoopGroup();
         EventLoopGroup work = new NioEventLoopGroup(1);
         //创建一个额外的线程池用来处理耗时操作   当处理耗时操作时，每次都会从线程池中拿一个新的线程来处理不同的事件
@@ -42,7 +34,14 @@ public class server {
                     }
                 });
         //启动类绑定本地端口
-        ChannelFuture channelFuture = bootstrap.bind(8080);
+        ChannelFuture channelFuture = bootstrap.bind(8080);*/
+
+        String s1 = "a";
+        String s4 = s1;
+        String s5 = "a" + "b";
+        String s6 = "ab";
+        System.out.println(s5 == s6);
+        System.out.println(s1 == s4);
 
     }
 }
