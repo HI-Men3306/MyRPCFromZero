@@ -123,9 +123,9 @@ public class jsonSerializer implements Serializer{
                     newParams[i] = request.getParams()[i];
                     System.out.println("一致  改变前" + curParam + " 改变后" + newParams[i]);
                 }
-                //imp 需要重新写回参数进request中
-                request.setParams(newParams);
             }
+            //imp 需要重新写回参数进request中
+            request.setParams(newParams);
             return request;
         }else if(mesType == messageType.RESPONSE.getCode()){//需要反序列化的结果为response请求
             System.out.println("response");
